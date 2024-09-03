@@ -402,7 +402,8 @@ class Ananicy:
             "apply_ionice": True,
             "apply_sched": True,
             "apply_oom_score_adj": True,
-            "apply_cgroup": True
+            "apply_cgroup": True,
+            "check_disks_schedulers": True
         }
 
         self.load_config()
@@ -527,7 +528,7 @@ class Ananicy:
                     if "apply_cgroup=" in col:
                         self.verbose["apply_cgroup"] = self.__YN(
                             self.__get_val(col))
-                    if "check_disks_schedulers" in col:
+                    if "check_disks_schedulers=" in col:
                         self.verbose["check_disks_schedulers"] = self.__YN(
                             self.__get_val(col))
 
